@@ -1,0 +1,72 @@
+site_name: My Tech & Hardware Wiki
+site_url: ้https://pbangtawee.github.io/wiki/
+site_description: Documentation for Hardware, IoT, and Embedded Projects
+site_author: Your Name
+
+theme:
+  name: material
+  language: th                  # รองรับภาษาไทย
+  font:
+    text: Roboto
+    code: Source Code Pro
+  palette:
+    # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: สลับไปใช้ Dark Mode
+    # Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: สลับไปใช้ Light Mode
+  features:
+    - navigation.tabs          # แถบเมนูหลักด้านบน
+    - navigation.sections      # แยกหมวดหมู่ใน Sidebar
+    - navigation.expand        # ขยายเมนูกิ่งอัตโนมัติ
+    - navigation.top           # ปุ่ม Back to top
+    - search.suggest           # ระบบค้นหาคำสืบค้นอัตโนมัติ
+    - search.highlight         # เน้นสีคำที่ค้นพบ
+    - content.code.copy        # ปุ่มก๊อปปี้โค้ดใน Code block
+
+copyright: 'Copyright &copy; 2026. All rights reserved.'
+
+# 🎨 ดึงไฟล์ Custom CSS มาบังคับเปลี่ยนสี CI ของเรา
+extra_css:
+  - assets/custom.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+      name: GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/
+      name: X
+
+plugins:
+  - search                     # ระบบค้นหาในเว็บ
+  - glightbox                  # ระบบคลิกขยายรูปภาพ
+
+markdown_extensions:
+  - admonition                 # กล่องแจ้งเตือน Warning/Note/Tip
+  - pymdownx.details           # กล่องพับเก็บเนื้อหา
+  - pymdownx.superfences       # รองรับ Code Block และ Mermaid Diagram
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true    # แท็บเลือกสลับภาษาโค้ด
+  - attr_list
+  - md_in_html              # รองรับแท็ก HTML ใน Markdown
+  - pymdownx.emoji:            # รองรับไอคอนแสดงผล
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# 📌 โครงสร้างเมนู Sidebar
+nav:
+  - หน้าแรก: index.md
+  - ฮาร์ดแวร์ & ไมโครคอนโทรลเลอร์:
+      - คู่มือ ESP32: wiki_hardware/esp32-guide.md
+      - คู่มือ RDK X5: hardware/rdk-x5.md
