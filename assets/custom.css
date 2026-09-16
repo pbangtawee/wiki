@@ -1,0 +1,104 @@
+/* ==========================================
+   Cyber-Vibrant Amber (Flipper Cyberpunk Vibe)
+   ========================================== */
+
+:root,
+[data-md-color-scheme="default"] {
+    /* พื้นหลังหน้าเว็บโทนฟ้าอ่อนไฮเทค ไม่จืด */
+    --md-default-bg-color: #EFF4F9 !important;
+    --md-default-bg-color--page: #EFF4F9 !important;
+    --md-default-bg-color--light: #FFFFFF !important;
+
+    /* ตัวอักษรเข้มคมชัด */
+    --md-default-fg-color: #0F172A !important;
+    --md-default-fg-color--light: #334155 !important;
+
+    /* สี Primary ของระบบ */
+    --md-primary-fg-color: #0A192F !important;
+    --md-primary-fg-color--light: #1E293B !important;
+    --md-primary-fg-color--dark: #020617 !important;
+
+    /* สีเน้น ลิงก์ และปุ่ม (Cyber Orange Neon) */
+    --md-accent-fg-color: #FF6B00 !important;
+    --md-accent-fg-color--transparent: rgba(255, 107, 0, 0.15) !important;
+    --md-typeset-a-color: #E65C00 !important;
+}
+
+/* 🚀 Header นีออนสดใส */
+.md-header {
+    background-color: #0A192F !important;
+    color: #FFFFFF !important;
+    border-bottom: 4px solid #FF6B00 !important;
+    /* เส้นแถบนีออนส้มใต้ Header */
+    box-shadow: 0 4px 20px rgba(255, 107, 0, 0.25) !important;
+    /* แสง Glow นีออน */
+}
+
+/* แถบ Tabs เมนูด้านบน */
+.md-tabs {
+    background-color: #112240 !important;
+    border-bottom: 1px solid #233554 !important;
+}
+
+.md-tabs__link {
+    color: #8892B0 !important;
+    font-weight: 600 !important;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+    color: #FF6B00 !important;
+}
+
+/* 🔗 ลิงก์เวลาชี้เม้าส์ */
+.md-typeset a {
+    font-weight: 600;
+}
+
+.md-typeset a:hover {
+    color: #FF8533 !important;
+    text-decoration: underline;
+}
+
+/* 🏷️ ปุ่มและป้ายไฮไลท์ */
+.md-typeset .md-button--primary {
+    background-color: #FF6B00 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3) !important;
+}
+
+.md-typeset .md-button--primary:hover {
+    background-color: #E65C00 !important;
+}
+
+/* 💡 กล่อง Admonition / Note / Warning ให้มีสีสดเรืองแสง */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+    border-color: #FF6B00 !important;
+    background-color: rgba(255, 107, 0, 0.05) !important;
+}
+
+.md-typeset .note>.admonition-title,
+.md-typeset details.note>summary {
+    background-color: rgba(255, 107, 0, 0.15) !important;
+    color: #D95200 !important;
+    font-weight: bold !important;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+    border-color: #00E676 !important;
+}
+
+/* 🌙 Dark Mode */
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color: #020C1B !important;
+    --md-default-bg-color--page: #020C1B !important;
+    --md-default-bg-color--light: #0A192F !important;
+    --md-default-fg-color: #E6F1FF !important;
+    --md-primary-fg-color: #0A192F !important;
+    --md-accent-fg-color: #FF6B00 !important;
+    --md-typeset-a-color: #FF8533 !important;
+}
